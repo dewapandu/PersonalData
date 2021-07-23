@@ -125,12 +125,12 @@ public class Personal {
         }
     }
 
-    public static void updatePersonal(int type, String attribute){
+    public static void updatePersonal(int attributeIndex, String attribute){
         String updateData;
         Scanner input = new Scanner(System.in);
-        System.out.println("Masukkan " + attribute + (type == 4 ? " [Belum Kawin/Kawin]" : "") + " : ");
+        System.out.println("Masukkan " + attribute + (attributeIndex == 4 ? " [Belum Kawin/Kawin]" : "") + " : ");
         updateData = input.nextLine();
-        personalInfo[type] = updateData.isEmpty() ? "-" : updateData;
+        personalInfo[attributeIndex] = updateData.isEmpty() ? "-" : updateData;
         System.out.println("Data " + attribute + " Anda berhasil diperbarui.");
         System.out.println("Tekan enter untuk kembali ke menu utama. . . ");
         try{System.in.read();}
